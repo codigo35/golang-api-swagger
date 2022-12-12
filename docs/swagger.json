@@ -1,0 +1,58 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "description": "endpoint para exemplo de uma chamada GET",
+                "tags": [
+                    "codigo35"
+                ],
+                "summary": "retorna um simples \"Hello, World\"",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/status": {
+            "post": {
+                "description": "ao receber um status code via POST (JSON), retorna o valor recebido",
+                "tags": [
+                    "codigo35"
+                ],
+                "summary": "retorna um status code recebido",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/main.StatusCodeHandlerPayload"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "main.StatusCodeHandlerPayload": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

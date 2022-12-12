@@ -1,0 +1,36 @@
+definitions:
+  main.StatusCodeHandlerPayload:
+    properties:
+      code:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /:
+    get:
+      description: endpoint para exemplo de uma chamada GET
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: retorna um simples "Hello, World"
+      tags:
+      - codigo35
+  /status:
+    post:
+      description: ao receber um status code via POST (JSON), retorna o valor recebido
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.StatusCodeHandlerPayload'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+      summary: retorna um status code recebido
+      tags:
+      - codigo35
+swagger: "2.0"
