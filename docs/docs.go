@@ -25,7 +25,7 @@ const docTemplate = `{
                 "summary": "retorna um simples \"Hello, World\"",
                 "responses": {
                     "200": {
-                        "description": "OK",
+                        "description": "Hello, World!",
                         "schema": {
                             "type": "string"
                         }
@@ -48,7 +48,7 @@ const docTemplate = `{
                         }
                     },
                     "400": {
-                        "description": "Bad Request",
+                        "description": "error description",
                         "schema": {
                             "type": "string"
                         }

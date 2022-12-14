@@ -12,7 +12,7 @@ paths:
       description: endpoint para exemplo de uma chamada GET
       responses:
         "200":
-          description: OK
+          description: Hello, World!
           schema:
             type: string
       summary: retorna um simples "Hello, World"
@@ -27,7 +27,7 @@ paths:
           schema:
             $ref: '#/definitions/main.StatusCodeHandlerPayload'
         "400":
-          description: Bad Request
+          description: error description
           schema:
             type: string
       summary: retorna um status code recebido

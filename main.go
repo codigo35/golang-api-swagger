@@ -38,7 +38,7 @@ func main() {
 // @Summary      retorna um simples "Hello, World"
 // @Description  endpoint para exemplo de uma chamada GET
 // @Tags 		 codigo35
-// @Success      200  {object}  string
+// @Success      200  {string} string "Hello, World!"
 // @Router       / [get]
 func helloWorldHandler(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello, World!")
@@ -49,7 +49,7 @@ func helloWorldHandler(c echo.Context) error {
 // @Description  ao receber um status code via POST (JSON), retorna o valor recebido
 // @Tags 		 codigo35
 // @Success      200  {object} StatusCodeHandlerPayload
-// @Failure      400  {object} string
+// @Failure      400  {string} string "error description"
 // @Router       /status [post]
 func statusCodeHandler(c echo.Context) error {
 	payload := new(StatusCodeHandlerPayload)
